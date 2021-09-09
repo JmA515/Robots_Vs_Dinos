@@ -1,4 +1,6 @@
 from battlefield import Battlefield
 
-def run_game(self):
-    pass
+
+new_game = Battlefield()
+
+new_game.run_game()

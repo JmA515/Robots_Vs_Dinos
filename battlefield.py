@@ -9,6 +9,7 @@ class Battlefield:
 
     def run_game(self):
         self.display_welcome()
+        self.display_winner(self.battle())
 
     def display_welcome(self):
         print("Welcome to Robots Vs Dinosaurs!\nLet the battle begin!")
@@ -49,5 +50,5 @@ class Battlefield:
         if self.fleet.robots[0].health <= 0 and self.fleet.robots[1].health <= 0 and self.fleet.robots[2].health <= 0:
             return True
 
-    def display_winner(self):
-        pass
+    def display_winner(self, winner):
+        print(winner)
