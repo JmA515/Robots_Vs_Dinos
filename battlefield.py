@@ -8,7 +8,7 @@ class Battlefield:
         self.herd = Herd()
 
     def run_game(self):
-        pass
+        self.display_welcome()
 
     def display_welcome(self):
         print("Welcome to Robots Vs Dinosaurs!")
@@ -17,10 +17,10 @@ class Battlefield:
         pass
 
     def dino_turn(self, dinosaur):
-        random.choice(self.herd.dinosaurs).attack(random.choice(self.fleet.robots))
+        dinosaur.attack(random.choice(self.fleet.robots))
 
     def robo_turn(self, robot):
-        random.choice(self.fleet.robots).attack(random.choice(self.herd.dinosaurs))
+        robot.attack(random.choice(self.herd.dinosaurs))
 
     def show_dino_opponent_options(self):
         pass

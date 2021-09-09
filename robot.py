@@ -7,6 +7,9 @@ class Robot:
         self.weapon = Weapon("laser", 2)
 
     def attack(self, dinosaur):
-        dinosaur.health = dinosaur.health - self.weapon.attack_power
-        print(f'{self.name} deals {self.weapon.attack_power} damage to {dinosaur.name}')
-        print(f'{dinosaur.name} is down to {dinosaur.health} health')
+        if dinosaur.health >= 0:
+            dinosaur.health = dinosaur.health - self.weapon.attack_power
+            print(f'{self.name} deals {self.weapon.attack_power} damage to {dinosaur.name}')
+            print(f'{dinosaur.name} is down to {dinosaur.health} health')
+        else:
+            print("That opponent is already defeated.")
