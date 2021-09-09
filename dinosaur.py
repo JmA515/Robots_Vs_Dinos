@@ -5,4 +5,6 @@ class Dinosaur:
         self.health = 10
 
     def attack(self, robot):
-        pass
+        robot.health = robot.health - self.attack_power
+        print(f'{self.name} deals {self.attack_power} damage to {robot.name}')
+        print(f'{robot.name} is down to {robot.health} health')
